@@ -1,3 +1,13 @@
+Prueba Pokemon - Pokedex
+
+Relización de pruebas con Solidity, creando dos contracts.
+
+Tenemos dos contracts, con los que podremos dar de alta pokemon, y luego con otra de las funciones, devolver el listado de pokemons que hemos dado de alta.
+
+Al acceso a la pokedex, para ver el listado, solo podrá el usuario que los haya dado de alta.
+
+---
+
 REMIX DEFAULT WORKSPACE
 
 Remix default workspace is present when:
