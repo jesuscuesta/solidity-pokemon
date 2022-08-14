@@ -1,0 +1,477 @@
+{
+	"id": "faf2d5f96094ef0145dfdca64466422d",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.4",
+	"solcLongVersion": "0.8.4+commit.c7e474f2",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/pokemon.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.4;\r\n\r\ncontract pokemon {\r\n\r\n    // Cualidades para cada pokemon\r\n    struct cualidades {\r\n        string name;\r\n        //enum Options {ELECTRICO, FUEGO, AGUA, PLANTA}\r\n        \r\n        //Options tipo_pokemon;\r\n        string ataque;\r\n    }\r\n\r\n    // Listado de pokemon que tenemos\r\n    cualidades [] pokedex;\r\n\r\n    // Añadir un nuevo pokemon a la pokedex\r\n    /*function capturar_nuevo_pokemon(string memory _name, enum memory _tipo_pokemon, string memory _ataque) internal {\r\n        cualidades.push(cualides(_name, _tipo_pokemon, _ataque));\r\n    }*/\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/pokemon.sol": {
+				"pokemon": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/pokemon.sol\":62:614  contract pokemon {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/pokemon.sol\":62:614  contract pokemon {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa264697066735822122059a91b4f749deb33322c4a6c4e52bc150bc0d5e54c81d5a8a1a186b25bb5e22b64736f6c63430008040033\n}\n",
+						"bytecode": {
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122059a91b4f749deb33322c4a6c4e52bc150bc0d5e54c81d5a8a1a186b25bb5e22b64736f6c63430008040033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MSIZE 0xA9 SHL 0x4F PUSH21 0x9DEB33322C4A6C4E52BC150BC0D5E54C81D5A8A1A1 DUP7 0xB2 JUMPDEST 0xB5 0xE2 0x2B PUSH5 0x736F6C6343 STOP ADDMOD DIV STOP CALLER ",
+							"sourceMap": "62:552:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea264697066735822122059a91b4f749deb33322c4a6c4e52bc150bc0d5e54c81d5a8a1a186b25bb5e22b64736f6c63430008040033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MSIZE 0xA9 SHL 0x4F PUSH21 0x9DEB33322C4A6C4E52BC150BC0D5E54C81D5A8A1A1 DUP7 0xB2 JUMPDEST 0xB5 0xE2 0x2B PUSH5 0x736F6C6343 STOP ADDMOD DIV STOP CALLER ",
+							"sourceMap": "62:552:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 614,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122059a91b4f749deb33322c4a6c4e52bc150bc0d5e54c81d5a8a1a186b25bb5e22b64736f6c63430008040033",
+									".code": [
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 614,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/pokemon.sol\":\"pokemon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/pokemon.sol\":{\"keccak256\":\"0x83cf47ed03a381ecccc68b5857d35871eaea713f73764d02bf796a6eef0a233e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6929e3336295f230b1054678aa4c583ef69d34387364c579e395ba2af1839ca2\",\"dweb:/ipfs/QmYHjbyHarBUM66s22c1Md4kujVremStLyiMdgsh1RaTCh\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 10,
+								"contract": "contracts/pokemon.sol:pokemon",
+								"label": "pokedex",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_array(t_struct(cualidades)6_storage)dyn_storage"
+							}
+						],
+						"types": {
+							"t_array(t_struct(cualidades)6_storage)dyn_storage": {
+								"base": "t_struct(cualidades)6_storage",
+								"encoding": "dynamic_array",
+								"label": "struct pokemon.cualidades[]",
+								"numberOfBytes": "32"
+							},
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							},
+							"t_struct(cualidades)6_storage": {
+								"encoding": "inplace",
+								"label": "struct pokemon.cualidades",
+								"members": [
+									{
+										"astId": 3,
+										"contract": "contracts/pokemon.sol:pokemon",
+										"label": "name",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_string_storage"
+									},
+									{
+										"astId": 5,
+										"contract": "contracts/pokemon.sol:pokemon",
+										"label": "ataque",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_string_storage"
+									}
+								],
+								"numberOfBytes": "64"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/pokemon.sol": {
+				"ast": {
+					"absolutePath": "contracts/pokemon.sol",
+					"exportedSymbols": {
+						"pokemon": [
+							11
+						]
+					},
+					"id": 12,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".4"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 11,
+							"linearizedBaseContracts": [
+								11
+							],
+							"name": "pokemon",
+							"nameLocation": "71:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "pokemon.cualidades",
+									"id": 6,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "161:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "154:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "154:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "ataque",
+											"nameLocation": "283:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "276:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "276:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "cualidades",
+									"nameLocation": "132:10:0",
+									"nodeType": "StructDefinition",
+									"scope": 11,
+									"src": "125:172:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 10,
+									"mutability": "mutable",
+									"name": "pokedex",
+									"nameLocation": "358:7:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 11,
+									"src": "344:21:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_array$_t_struct$_cualidades_$6_storage_$dyn_storage",
+										"typeString": "struct pokemon.cualidades[]"
+									},
+									"typeName": {
+										"baseType": {
+											"id": 8,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 7,
+												"name": "cualidades",
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 6,
+												"src": "344:10:0"
+											},
+											"referencedDeclaration": 6,
+											"src": "344:10:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_cualidades_$6_storage_ptr",
+												"typeString": "struct pokemon.cualidades"
+											}
+										},
+										"id": 9,
+										"nodeType": "ArrayTypeName",
+										"src": "344:13:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_array$_t_struct$_cualidades_$6_storage_$dyn_storage_ptr",
+											"typeString": "struct pokemon.cualidades[]"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 12,
+							"src": "62:552:0",
+							"usedErrors": []
+						}
+					],
+					"src": "35:579:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

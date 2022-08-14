@@ -1,0 +1,117 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getPokedex",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tipo_pokemon",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "ataque",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Pokemon.cualidades[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombrePokemon",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_tipo_pokemon",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ataque",
+						"type": "string"
+					}
+				],
+				"name": "lanzar_pokeball",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/pokemon.sol": "Entrador_pokemon"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/pokemon.sol": {
+			"keccak256": "0x49e2266ee2c0f41a5fab663cb57148c0d821019829ff8ad0fc7ccc0c6d6cb931",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2f31f00ca690049893a25c51e56d26358d53c759e29c427853d3fbc707fa2cef",
+				"dweb:/ipfs/QmaEDbfd9FRK3oZCXKnRXsWGf9PXRyq9LuK3NAfGNLMjBC"
+			]
+		}
+	},
+	"version": 1
+}

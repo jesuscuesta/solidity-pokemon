@@ -1,0 +1,562 @@
+{
+	"id": "a1ffba9e0807c2a92f187411f2fbb4fa",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.4",
+	"solcLongVersion": "0.8.4+commit.c7e474f2",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/pokemon.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.4;\r\n\r\ncontract pokemon {\r\n    \r\n    enum State {ELECTRICO, FUEGO, AGUA, PLANTA}\r\n\r\n    // Cualidades para cada pokemon\r\n    struct cualidades {\r\n        string name;\r\n        \r\n        State tipo_pokemon;\r\n        string ataque;\r\n    }\r\n\r\n    // Listado de pokemon que tenemos\r\n    cualidades [] pokedex;\r\n\r\n    // Añadir un nuevo pokemon a la pokedex\r\n    /*function capturar_nuevo_pokemon(string memory _name, enum memory _tipo_pokemon, string memory _ataque) internal {\r\n        cualidades.push(cualides(_name, _tipo_pokemon, _ataque));\r\n    }*/\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/pokemon.sol": {
+				"pokemon": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/pokemon.sol\":62:608  contract pokemon {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/pokemon.sol\":62:608  contract pokemon {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa26469706673582212208759da8e9ca03008919522014bd3a4c52f83823586b2207a799cd84c6b8102fd64736f6c63430008040033\n}\n",
+						"bytecode": {
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212208759da8e9ca03008919522014bd3a4c52f83823586b2207a799cd84c6b8102fd64736f6c63430008040033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP8 MSIZE 0xDA DUP15 SWAP13 LOG0 ADDRESS ADDMOD SWAP2 SWAP6 0x22 ADD 0x4B 0xD3 LOG4 0xC5 0x2F DUP4 DUP3 CALLDATALOAD DUP7 0xB2 KECCAK256 PUSH27 0x799CD84C6B8102FD64736F6C634300080400330000000000000000 ",
+							"sourceMap": "62:546:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea26469706673582212208759da8e9ca03008919522014bd3a4c52f83823586b2207a799cd84c6b8102fd64736f6c63430008040033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP8 MSIZE 0xDA DUP15 SWAP13 LOG0 ADDRESS ADDMOD SWAP2 SWAP6 0x22 ADD 0x4B 0xD3 LOG4 0xC5 0x2F DUP4 DUP3 CALLDATALOAD DUP7 0xB2 KECCAK256 PUSH27 0x799CD84C6B8102FD64736F6C634300080400330000000000000000 ",
+							"sourceMap": "62:546:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 608,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a26469706673582212208759da8e9ca03008919522014bd3a4c52f83823586b2207a799cd84c6b8102fd64736f6c63430008040033",
+									".code": [
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 608,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/pokemon.sol\":\"pokemon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/pokemon.sol\":{\"keccak256\":\"0xdbefecd494f51921aa69129ffd267db4c3b8e3a883992f1091a4781bc6d83514\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://342770e0ca057768655b306b2565a500f626c1f44887b87901c6dfaeb701bccc\",\"dweb:/ipfs/QmcxLLviKUWJMmgGCP7tNaCoEX9QgewVPtrhLWTeBJTUnf\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 18,
+								"contract": "contracts/pokemon.sol:pokemon",
+								"label": "pokedex",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_array(t_struct(cualidades)14_storage)dyn_storage"
+							}
+						],
+						"types": {
+							"t_array(t_struct(cualidades)14_storage)dyn_storage": {
+								"base": "t_struct(cualidades)14_storage",
+								"encoding": "dynamic_array",
+								"label": "struct pokemon.cualidades[]",
+								"numberOfBytes": "32"
+							},
+							"t_enum(State)6": {
+								"encoding": "inplace",
+								"label": "enum pokemon.State",
+								"numberOfBytes": "1"
+							},
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							},
+							"t_struct(cualidades)14_storage": {
+								"encoding": "inplace",
+								"label": "struct pokemon.cualidades",
+								"members": [
+									{
+										"astId": 8,
+										"contract": "contracts/pokemon.sol:pokemon",
+										"label": "name",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_string_storage"
+									},
+									{
+										"astId": 11,
+										"contract": "contracts/pokemon.sol:pokemon",
+										"label": "tipo_pokemon",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_enum(State)6"
+									},
+									{
+										"astId": 13,
+										"contract": "contracts/pokemon.sol:pokemon",
+										"label": "ataque",
+										"offset": 0,
+										"slot": "2",
+										"type": "t_string_storage"
+									}
+								],
+								"numberOfBytes": "96"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/pokemon.sol": {
+				"ast": {
+					"absolutePath": "contracts/pokemon.sol",
+					"exportedSymbols": {
+						"pokemon": [
+							19
+						]
+					},
+					"id": 20,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".4"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 19,
+							"linearizedBaseContracts": [
+								19
+							],
+							"name": "pokemon",
+							"nameLocation": "71:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "pokemon.State",
+									"id": 6,
+									"members": [
+										{
+											"id": 2,
+											"name": "ELECTRICO",
+											"nameLocation": "104:9:0",
+											"nodeType": "EnumValue",
+											"src": "104:9:0"
+										},
+										{
+											"id": 3,
+											"name": "FUEGO",
+											"nameLocation": "115:5:0",
+											"nodeType": "EnumValue",
+											"src": "115:5:0"
+										},
+										{
+											"id": 4,
+											"name": "AGUA",
+											"nameLocation": "122:4:0",
+											"nodeType": "EnumValue",
+											"src": "122:4:0"
+										},
+										{
+											"id": 5,
+											"name": "PLANTA",
+											"nameLocation": "128:6:0",
+											"nodeType": "EnumValue",
+											"src": "128:6:0"
+										}
+									],
+									"name": "State",
+									"nameLocation": "97:5:0",
+									"nodeType": "EnumDefinition",
+									"src": "92:43:0"
+								},
+								{
+									"canonicalName": "pokemon.cualidades",
+									"id": 14,
+									"members": [
+										{
+											"constant": false,
+											"id": 8,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "216:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "209:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 7,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "209:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 11,
+											"mutability": "mutable",
+											"name": "tipo_pokemon",
+											"nameLocation": "247:12:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "241:18:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_enum$_State_$6",
+												"typeString": "enum pokemon.State"
+											},
+											"typeName": {
+												"id": 10,
+												"nodeType": "UserDefinedTypeName",
+												"pathNode": {
+													"id": 9,
+													"name": "State",
+													"nodeType": "IdentifierPath",
+													"referencedDeclaration": 6,
+													"src": "241:5:0"
+												},
+												"referencedDeclaration": 6,
+												"src": "241:5:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_enum$_State_$6",
+													"typeString": "enum pokemon.State"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 13,
+											"mutability": "mutable",
+											"name": "ataque",
+											"nameLocation": "277:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "270:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 12,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "270:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "cualidades",
+									"nameLocation": "187:10:0",
+									"nodeType": "StructDefinition",
+									"scope": 19,
+									"src": "180:111:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 18,
+									"mutability": "mutable",
+									"name": "pokedex",
+									"nameLocation": "352:7:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 19,
+									"src": "338:21:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_array$_t_struct$_cualidades_$14_storage_$dyn_storage",
+										"typeString": "struct pokemon.cualidades[]"
+									},
+									"typeName": {
+										"baseType": {
+											"id": 16,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 15,
+												"name": "cualidades",
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 14,
+												"src": "338:10:0"
+											},
+											"referencedDeclaration": 14,
+											"src": "338:10:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_cualidades_$14_storage_ptr",
+												"typeString": "struct pokemon.cualidades"
+											}
+										},
+										"id": 17,
+										"nodeType": "ArrayTypeName",
+										"src": "338:13:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_array$_t_struct$_cualidades_$14_storage_$dyn_storage_ptr",
+											"typeString": "struct pokemon.cualidades[]"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 20,
+							"src": "62:546:0",
+							"usedErrors": []
+						}
+					],
+					"src": "35:573:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
